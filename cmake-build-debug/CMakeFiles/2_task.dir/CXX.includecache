@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.cpp
+kmp_search.h
+/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
+
+/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
+vector
+-
+string
+-
+iostream
+-
+cstdio
+-
+dirent.h
+-
+unistd.h
+-
+fcntl.h
+-
+sys/types.h
+-
+cstring
+-
+fstream
+-
+thread
+-
+mutex
+-
+
+/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/main.cpp
+kmp_search.h
+/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
+
