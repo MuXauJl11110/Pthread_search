@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug"/>
+				<Option working_dir="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug"/>
+				<Option working_dir="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="2_task">
-				<Option output="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/2_task" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug"/>
+				<Option output="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/2_task" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_task"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_task"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="2_task/fast">
-				<Option output="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/2_task" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug"/>
+				<Option output="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/2_task" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,33 +67,33 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_task/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 2_task/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug"/>
+				<Option working_dir="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3\ sem/Home\ Tasks/2\ task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.cpp">
+		<Unit filename="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.cpp">
 			<Option target="2_task"/>
 		</Unit>
-		<Unit filename="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h">
+		<Unit filename="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.h">
 			<Option target="2_task"/>
 		</Unit>
-		<Unit filename="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/main.cpp">
+		<Unit filename="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/main.cpp">
 			<Option target="2_task"/>
 		</Unit>
-		<Unit filename="/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/CMakeLists.txt">
+		<Unit filename="/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.cpp" "/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/CMakeFiles/2_task.dir/kmp_search.cpp.o"
-  "/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/main.cpp" "/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/CMakeFiles/2_task.dir/main.cpp.o"
+  "/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.cpp" "/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/CMakeFiles/2_task.dir/kmp_search.cpp.o"
+  "/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/main.cpp" "/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/CMakeFiles/2_task.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.cpp
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.cpp
 kmp_search.h
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.h
 
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/kmp_search.h
 vector
 -
 string
@@ -35,8 +35,4 @@ thread
 -
 mutex
 -
-
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/main.cpp
-kmp_search.h
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/kmp_search.h
 

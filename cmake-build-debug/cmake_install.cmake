@@ -1,4 +1,4 @@
-# Install script for directory: /home/michael/Documents/Informatics/3 sem/Home Tasks/2 task
+# Install script for directory: /home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

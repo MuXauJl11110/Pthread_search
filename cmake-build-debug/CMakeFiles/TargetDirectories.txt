@@ -1,3 +1,3 @@
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/CMakeFiles/2_task.dir
-/home/michael/Documents/Informatics/3 sem/Home Tasks/2 task/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/CMakeFiles/2_task.dir
+/home/michael/Documents/Informatics/3_sem/Home_Tasks/2_task/cmake-build-debug/CMakeFiles/edit_cache.dir
