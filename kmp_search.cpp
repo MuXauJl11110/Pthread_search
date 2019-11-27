@@ -47,47 +47,96 @@ void pthread_search::kmp_make() {
     }
 }
 
-int pthread_search::parcer(int argc, char **argv) {
+bool pthread_search::parcer(int argc, char **argv) {
+    if (argc > 5) {
+        cout << "Wrong request! Too many arguments!" << endl;
+        return false;
+    }
+    if (argc < 2) {
+        cout << "Wrong request! Too few arguments!" << endl;
+        return false;
+    }
+    bool path_flag = true;
+    int num_of_flags = 0;
     for (int i = 0; i < argc; i++) {
         switch(argv[i][0]) {
             case '-':
-                if (argv[i][1] == 't') {
-                    string thread_flag = argv[i] + 2; // Нужно передвинуть указатель, чтобы не было ошибок в stoi
-                    num_of_threads = stoi(thread_flag);
+                if (num_of_flags < 2) {
+                    if (argv[i][1] == 't') {
+                        string thread_flag = argv[i] + 2; // Нужно передвинуть указатель, чтобы не было ошибок в stoi
+                        num_of_threads = stoi(thread_flag);
+                        num_of_flags++;
+                    } else if (argv[i][1] == 'n') {
+                        current_directory_flag = 1;
+                        num_of_flags++;
+                    } else {
+                        cout << "Wrong request! Invalid parameter!" << endl;
+                        return false;
+                    }
                 } else {
-                    current_directory_flag = 1;
+                    cout << "Wrong request! Too many parameters!" << endl;
+                    return false;
                 }
                 break;
             case '/':
-                path = argv[i];
+                if (path_flag) {
+                    path = argv[i];
+                    path_flag = false;
+                } else {
+                    cout << "Wrong request! There must be single path!" << endl;
+                    return false;
+                }
                 break;
             case '.':
+                if (i != 0) {
+                    if (!path_flag) {
+                        cout << "Wrong request! There must be single path!" << endl;
+                        return false;
+                    }
+                    path = argv[i];
+                    path_flag = false;
+                }
                 break;
             default :
                 pattern = argv[i];
                 break;
         }
     }
+    if (pattern.empty()) {
+        cout << "Wrong request! You have forgotten to indicate pattern" << endl;
+        return false;
+    }
+    return true;
 }
 
 int pthread_search::make_queue(const string& current_path) {
     DIR *dir = opendir(current_path.c_str());
-    if (dir == NULL) {
+    if (dir == nullptr) {
         return 0;
     }
     string new_path;
-    for (auto rd = readdir(dir); rd != NULL; rd = readdir(dir)) {
+    for (auto rd = readdir(dir); rd != nullptr; rd = readdir(dir)) {
         switch (rd->d_type) {
             case DT_REG: // file
                 //cout << "File:" << rd->d_name << endl;
                 file_names.emplace_back(string(rd->d_name));
-                new_path = current_path + "/" + rd->d_name;
+                //new_path = current_path + "/" + rd->d_name;
+                if (path[path.size() - 1] == '/') {
+                    new_path = path + rd->d_name;
+                } else {
+                    new_path = path + "/" + rd->d_name;
+                }
                 file_paths.push_back(new_path);
                 break;
             case DT_DIR: // directory
                 //cout << "Directory:" << rd->d_name << endl;
                 if ((strcmp(rd->d_name, ".") != 0) && (strcmp(rd->d_name, "..") != 0)) {
-                    new_path = current_path + "/" + rd->d_name;
+                    //new_path = current_path + "/" + rd->d_name;
+                    if (path[path.size() - 1] == '/') {
+                        new_path = path + rd->d_name;
+                    } else {
+                        new_path = path + "/" + rd->d_name;
+                    }
                     make_queue(new_path);
                 }
                 break;
@@ -100,14 +149,19 @@ int pthread_search::make_queue(const string& current_path) {
 }
 int pthread_search::make_queue_for_current_directory() {
     DIR *dir = opendir(path.c_str());
-    if (dir == NULL) {
+    if (dir == nullptr) {
         return 0;
     }
-    for (auto rd = readdir(dir); rd != NULL; rd = readdir(dir)) {
+    for (auto rd = readdir(dir); rd != nullptr; rd = readdir(dir)) {
         if (rd->d_type == DT_REG) {
             //cout << "File:" << rd->d_name << endl;
             file_names.emplace_back(string(rd->d_name));
-            string new_path = path + "/" + rd->d_name;
+            string new_path;
+            if (path[path.size() - 1] == '/') {
+                new_path = path + rd->d_name;
+            } else {
+                new_path = path + "/" + rd->d_name;
+            }
             file_paths.push_back(new_path);
         }
     }
@@ -123,7 +177,7 @@ void pthread_search::print() {
     cout << "File paths size: " << file_paths.size() << endl;
     cout << "Queue:" << endl;
     for (int i = 0; i < file_paths.size(); i++) {
-        cout << file_paths[i] << "--> " << file_names[i] << endl;
+        cout << i << " " << file_paths[i] << "--> " << file_names[i] << endl;
     }
 }
 
@@ -146,16 +200,17 @@ bool pthread_search::row_check(const string& row) {
 void pthread_search::search() {
     while (true) {
         mut.lock();       /* блокировка общей очереди */
-        string current_path = file_paths[queue_position];
-        size_t current_queue_position = queue_position;
-
-        if (queue_position < file_names.size()) {
+        string current_path;
+        size_t current_queue_position;
+        if (queue_position < file_paths.size()) {
+            current_path = file_paths[queue_position];
+            current_queue_position = queue_position;
             queue_position++;
+            mut.unlock();
         } else {
             mut.unlock();  /* разблокирование общей очереди */
             return;
         }
-        mut.unlock();  /* разблокирование общей очереди */
         ifstream input(current_path);
         if (input) {
             string line;
@@ -163,6 +218,7 @@ void pthread_search::search() {
             while (getline(input, line)) {
                 if (row_check(line)) {
                     cout << file_names[current_queue_position] << " " << i << " " << line << endl;
+                    empty_ouput = false;
                 }
                 i++;
             }
@@ -172,7 +228,9 @@ void pthread_search::search() {
 }
 int pthread_search::manage_threads(int argc, char **argv) {
     // Разбор запроса из командной строки
-    parcer(argc, argv);
+    if (!parcer(argc, argv)) {
+        return 0;
+    }
 
     // Создание КМП-автомата с исключениями
     kmp_make();
@@ -192,6 +250,9 @@ int pthread_search::manage_threads(int argc, char **argv) {
     for (int i = 0; i < num_of_threads; i++) {
         threads[i].join();
     }
-    search();
+    if (empty_ouput) {
+        cout << "Sorry. There is nothing for " << pattern << "!" << endl;
+        return 0;
+    }
     return 0;
 }

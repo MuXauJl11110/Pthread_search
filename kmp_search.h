@@ -24,7 +24,7 @@ private:
     size_t current_directory_flag = 0;
     vector<string> file_paths;
     vector<string> file_names;
-    int parcer(int argc, char **argv);
+    bool parcer(int argc, char **argv);
     int make_queue(const string& current_path);
     int make_queue_for_current_directory();
 
@@ -41,6 +41,9 @@ private:
     vector<thread> threads;
     size_t queue_position = 0; // Позиция в очереди файлов
     void search();
+
+    // Проверка того напечаталось ли что-нибудь на экран
+    bool empty_ouput = true;
 
     // Функция печати для дебагинга
     void print();
